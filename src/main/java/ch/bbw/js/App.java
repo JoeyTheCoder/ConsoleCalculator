@@ -18,7 +18,7 @@ public class App{
 
         System.out.println("Console Calculator");
         System.out.println("==================");
-        System.out.println(valueA + "/" + valueB + "= " + calculator.Summe(valueA, valueB) );
+        System.out.println(val1 + "/" + val2 + "= " + calculator.Summe(val1, val2) );
         System.out.println("");
     }
 }

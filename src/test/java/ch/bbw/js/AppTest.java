@@ -1,5 +1,8 @@
 package ch.bbw.js;
 
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -9,13 +12,26 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
-public class AppTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(App.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+
+
+public class AppTest extends TestCase
+    {
+
+        public AppTest( String testName )
+        {
+            super( testName );
+        }
+
+        public static Test suite()
+        {
+            return new TestSuite( AppTest.class );
+        }
+
+        public void testApp()
+        {
+            assertTrue( true );
+        }
     }
 
-}
+
+

@@ -1,5 +1,7 @@
 package ch.bbw.js;
 
+
+
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -12,10 +14,15 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
+/**
+ *
+ */
+
 public class CalculatorTest {
 
+
     private Calculator test;
+
 
     //Summe
 
@@ -77,11 +84,5 @@ public class CalculatorTest {
         assertTrue(test.Summe(-50, 50) == 0);
     }
 
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Calculator.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-    }
 
 }
