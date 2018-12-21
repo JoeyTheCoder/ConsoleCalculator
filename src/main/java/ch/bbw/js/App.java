@@ -1,5 +1,7 @@
 package ch.bbw.js;
 
+import static javafx.application.Application.launch;
+
 /**
  * App
  * @Author Joel Sahli
@@ -7,7 +9,18 @@ package ch.bbw.js;
  */
 
 public class App{
+    public static void main(String[] args){
 
+        Calculator calculator = new Calculator();
+
+        int val1 = 12;
+        int val2 = 8;
+
+        System.out.println("Console Calculator");
+        System.out.println("==================");
+        System.out.println(valueA + "/" + valueB + "= " + calculator.Summe(valueA, valueB) );
+        System.out.println("");
+    }
 }
 
 
