@@ -28,6 +28,12 @@ public class App{
         System.out.println(val1 + "-" + val2 + "= " + calculator.subtraction(val1, val2) );
         System.out.println("");
 
+        //multiply
+        System.out.println("Console Calculator");
+        System.out.println("==================");
+        System.out.println(val1 + "*" + val2 + "= " + calculator.multiplikation(val1, val2) );;
+        System.out.println("");
+
 
 
     }

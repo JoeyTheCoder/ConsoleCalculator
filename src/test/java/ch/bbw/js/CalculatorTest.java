@@ -114,6 +114,42 @@ public class CalculatorTest {
 
         assertTrue(test.subtraction(18, 18) == 0);
     }
+    //multiply
+    @Test
+    public void testMultiplikationZweiPositiveIsOk() {
+        assertTrue(test.multiplikation(8, 7) == 56);
+    }
+
+    @Test
+    public void testMultiplikationZweiNegativeIsOk() {
+
+        assertTrue(test.multiplikation(-5, -7) == 35);
+    }
+
+    @Test
+    public void testMultiplikationPositivUndNegativeIsOk() {
+
+        assertTrue(test.multiplikation(-10, 5) == -50);
+    }
+
+    @Test
+    public void testMultiplikationZeroIsOk() {
+
+        assertTrue(test.multiplikation(80, 0) == 0);
+    }
+
+    @Test
+    public void testMultiplikationZeroIsOk2() {
+
+        assertTrue(test.multiplikation(0, 90) == 0);
+    }
+
+    @Test
+    public void testMultiplikation0Und0IsOk() {
+
+        assertTrue(test.multiplikation(0, 0) == 0);
+    }
+
 
 
 }
