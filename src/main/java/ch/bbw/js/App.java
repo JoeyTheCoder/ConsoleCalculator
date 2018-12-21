@@ -1,5 +1,7 @@
 package ch.bbw.js;
 
+import static javafx.application.Application.launch;
+
 /**
  * App
  * @Author Joel Sahli
@@ -7,7 +9,8 @@ package ch.bbw.js;
  */
 
 public class App{
-
+    public static void main(String[] args){
+    }
 }
 
 
