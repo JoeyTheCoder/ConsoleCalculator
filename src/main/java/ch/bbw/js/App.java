@@ -13,13 +13,23 @@ public class App{
 
         Calculator calculator = new Calculator();
 
-        int val1 = 12;
-        int val2 = 8;
+        int val1 = 5;
+        int val2 = 10;
 
+        //summe
         System.out.println("Console Calculator");
         System.out.println("==================");
-        System.out.println(val1 + "/" + val2 + "= " + calculator.Summe(val1, val2) );
+        System.out.println(val1 + "/" + val2 + "= " + calculator.summe(val1, val2) );
         System.out.println("");
+
+        //Subtraktion
+        System.out.println("Console Calculator");
+        System.out.println("==================");
+        System.out.println(val1 + "-" + val2 + "= " + calculator.subtraction(val1, val2) );
+        System.out.println("");
+
+
+
     }
 }
 
