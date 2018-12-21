@@ -1,3 +1,14 @@
 language: java
 sudo: false
-script: mvn test
+script: mvn install
+before_deploy:
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
+deploy:
+  provider: releases
+  api_key:
+    secure: avsPdJlgnTWIlwMtXQ2hEMf6lDD7kLfjmPEaOLDNj31hWqOaKZqIZmP9i/wvQ9sGoWEjB9I9v4cIGV8UZ2yMNF7A7aIYrlZGlmepdzvI0IkPlc796Ji1H0nsNRPIqVTe4TH1ST23Vwk8Kn6KiC4GvpKLtyQteqMIq9ywLMJCvlHjgNKXuRCKg22L4CYEGVnJoc+aomgOfYjnWcFAdjp/VUibZXCYavocXNNYmVplXBCsv/VVqztNXdGVMZg9C12DLVIEQhGEhdCMKqdfzkhfjr3mY+Y91BWuq3dygyeD82a8/ypKnHZerwMmjhrkoAKJLsgLD/8+eH5vNh/ZPXAvzbVxJiPl04BD7Nya8lJzZrDdEO/abPLjeL3uneSvo8aUrINl8hhucULMgAtloDJmKIOkd5i9Tg5WgWZyloT9R6WodpDRTcc1wk4rBif0jXJ3e+s4gi8uMMGZADrYB+FbImoFRF9+uqst8cshmmKN48TnWWIeD7+eFczVVtZ9QuCoGMf6jFRYZb76Etx8tstV2jvxISFfMPIJGg5wngKLLCX2WsZSuMP4wmp/fiX1Nbx09y0fZi2kzJpKAVwHJGY481n2QKHJAkFWtr4A6kwqzfuRnByLOZYZY6lHrIyh7ulMRlYwEHE4VPsgpF2G1c/Gemyvhk0znOQ/pXaXmVVhuDc=
+  file: "/home/travis/.m2/repository/App/App/1.0-SNAPSHOT/App-1.0-SNAPSHOT.jar"
+  on:
+    repo: JoeyTheCoder/ConsoleCalculator
+    branch: travisCI
