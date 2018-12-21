@@ -16,13 +16,13 @@ public class App{
         int val1 = 5;
         int val2 = 10;
 
-        //summe
+        //add
         System.out.println("Console Calculator");
         System.out.println("==================");
         System.out.println(val1 + "/" + val2 + "= " + calculator.summe(val1, val2) );
         System.out.println("");
 
-        //Subtraktion
+        //subtract
         System.out.println("Console Calculator");
         System.out.println("==================");
         System.out.println(val1 + "-" + val2 + "= " + calculator.subtraction(val1, val2) );
@@ -34,7 +34,11 @@ public class App{
         System.out.println(val1 + "*" + val2 + "= " + calculator.multiplikation(val1, val2) );;
         System.out.println("");
 
-
+        //divide
+        System.out.println("Console Calculator");
+        System.out.println("==================");
+        System.out.println(val1 + "/" + val2 + "= " + calculator.division(val1, val2) );
+        System.out.println("");
 
     }
 }

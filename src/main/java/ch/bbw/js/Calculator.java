@@ -18,4 +18,8 @@ public class Calculator {
     public double multiplikation(double faktor1, double faktor2) {
         return faktor1 * faktor2;
     }
+
+    public double division(double divident, double divisor) {
+        return divident / divisor;
+    }
 }
