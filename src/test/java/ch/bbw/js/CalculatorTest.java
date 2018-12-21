@@ -18,7 +18,7 @@ public class CalculatorTest {
     private Calculator test;
 
 
-    //summe
+    //add
 
     @Before
     public void initialize() {
@@ -56,7 +56,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSummeMaxValueUndZeroIsOk() {
+    public void testSummeMaxValueUndZeroTrue() {
 
         assertTrue(test.summe(Integer.MAX_VALUE, 0) == Integer.MAX_VALUE);
     }
@@ -78,77 +78,127 @@ public class CalculatorTest {
         assertTrue(test.summe(-50, 50) == 0);
     }
 
-    //subtraction
+    //subtract
     @Test
-    public void testSubtraktionZweiPositiveIsOk() {
+    public void testSubtraktionZweiPositiveTrue() {
         assertTrue(test.subtraction(25, 9) == 16);
     }
 
     @Test
-    public void testSubtraktionZweiNegativeIsOk() {
+    public void testSubtraktionZweiNegativeTrue() {
 
         assertTrue(test.subtraction(-10, -11) == 1);
     }
 
     @Test
-    public void testSubtraktionPositivUndNegativeIsOk() {
+    public void testSubtraktionPositivUndNegativeTrue() {
 
         assertTrue(test.subtraction(15, -6) == 21);
     }
 
 
     @Test
-    public void testSubtraktionMaxValueUndZeroIsOk() {
+    public void testSubtraktionMaxValueUndZeroTrue() {
 
         assertTrue(test.subtraction(Integer.MAX_VALUE, 0) == 0x7fffffff);
     }
 
     @Test
-    public void testSubtraktionMinValueUndZeroIsOk() {
+    public void testSubtraktionMinValueUndZeroTrue() {
 
         assertTrue(test.subtraction(Integer.MIN_VALUE, 0) == -0x80000000);
     }
 
     @Test
-    public void testSubtraktionZeroIsOk() {
+    public void testSubtraktionZeroTrue() {
 
         assertTrue(test.subtraction(18, 18) == 0);
     }
     //multiply
     @Test
-    public void testMultiplikationZweiPositiveIsOk() {
+    public void testMultiplikationZweiPositiveTrue() {
         assertTrue(test.multiplikation(8, 7) == 56);
     }
 
     @Test
-    public void testMultiplikationZweiNegativeIsOk() {
+    public void testMultiplikationZweiNegativeTrue() {
 
         assertTrue(test.multiplikation(-5, -7) == 35);
     }
 
     @Test
-    public void testMultiplikationPositivUndNegativeIsOk() {
+    public void testMultiplikationPositivUndNegativeTrue() {
 
         assertTrue(test.multiplikation(-10, 5) == -50);
     }
 
     @Test
-    public void testMultiplikationZeroIsOk() {
+    public void testMultiplikationZeroTrue() {
 
         assertTrue(test.multiplikation(80, 0) == 0);
     }
 
     @Test
-    public void testMultiplikationZeroIsOk2() {
+    public void testMultiplikationZeroTrue2() {
 
         assertTrue(test.multiplikation(0, 90) == 0);
     }
 
     @Test
-    public void testMultiplikation0Und0IsOk() {
+    public void testMultiplikationNullUndNullTrue() {
 
         assertTrue(test.multiplikation(0, 0) == 0);
     }
+
+    //divide
+    @Test
+    public void testDivisionZweiPositiveTrue() {
+        assertTrue(test.division(25, 5) == 5);
+    }
+
+    @Test
+    public void testDivisionZweiNegativeTrue() {
+
+        assertTrue(test.division(-15, -3) == 5);
+    }
+
+    @Test
+    public void testDivisionPositivUndNegativeTrue() {
+
+        assertTrue(test.division(12, -3) == -4);
+    }
+
+    @Test
+    public void testDivisionNegativUndPositivTrue() {
+
+        assertTrue(test.division(-10, 5) == -2);
+    }
+    @Test
+    public void testDivisionMaxValueUnd1True() {
+
+        assertTrue(test.division(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testDivisionZweiGleicheZahlenTrue() {
+
+        assertTrue(test.division(19, 19) == 1);
+    }
+
+    @Test
+    public void testDivisionDurch0False() throws ArithmeticException {
+
+        assertFalse(test.division(13, 0) == 0);
+    }
+
+    @Test
+    public void testDivisionNullDurchDividisorTrue() {
+
+
+        assertTrue(test.division(0, 12) == 0);
+    }
+
+
 
 
 
