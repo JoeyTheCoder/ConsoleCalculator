@@ -7,4 +7,7 @@ package ch.bbw.js;
  */
 
 public class Calculator {
+    public int Summe(int summand1, int summand2) {
+        return summand1 + summand2;
+    }
 }
