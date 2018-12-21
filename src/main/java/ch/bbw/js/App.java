@@ -40,10 +40,11 @@ public class App{
         System.out.println(val1 + "/" + val2 + "= " + calculator.division(val1, val2) );
         System.out.println("");
 
-        //Hex to binary and binary to Hex
+        //Hex to binary and
         int n = (int) Long.parseLong("ffff8000", 16);
         System.out.println(n);
 
+        //Binary to hex
         int b=-32768;
         String Hex=Integer.toHexString(b);
         System.out.println(Hex);
